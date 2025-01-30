@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #425ac6 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+
+.screen {
+    padding: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+#start-btn, #restart-btn {
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 12px 24px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#timer, #score {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-grid .btn {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-grid .btn:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-grid .btn.correct {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.btn-grid .btn.incorrect {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+#feedback {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 24px;
+}
+
+#next-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+}
